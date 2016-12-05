@@ -11,6 +11,11 @@
 *.gch
 *.pch
 
+####################
+#VS Generated Files#
+####################
+*.db
+
 # Compiled Dynamic libraries
 *.so
 *.dylib

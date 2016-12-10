@@ -17,7 +17,6 @@ void  ATankPlayerController::BeginPlay()
 		UE_LOG(LogTemp, Warning, TEXT("Player Controller possesing: %s"),*(ControlledTank->GetName()));
 	}
 	UE_LOG(LogTemp, Warning,TEXT("Player Controller Begin Play"));
-
 }
 
 ATank* ATankPlayerController::GetControlledTank() const 
@@ -64,7 +63,6 @@ bool ATankPlayerController::GetSightRayLocation(FVector& HitLocation) const
 
 bool ATankPlayerController::GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection) const
 {
-	
 	FVector CameraWorldLocation;  // to be discarded
 	return DeprojectScreenPositionToWorld(
 		ScreenLocation.X,

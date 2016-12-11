@@ -2,10 +2,13 @@
 
 #pragma once
 
-#include "Tank.h"
+
 #include "GameFramework/PlayerController.h"
 #include "TankPlayerController.generated.h" // Must be the last include
 
+
+//Forward declaration
+class ATank;
 /**
  * 
  */
@@ -34,5 +37,9 @@ private:
 	UPROPERTY(EditAnywhere)
 	float CrosshairYPosition = 0.3333;
 
+	UPROPERTY(EditAnywhere)
+	float LineTraceRange = 1000000;
+
 	bool GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection) const;
+	bool GetLookVectorHitLocation(FVector LookDirection, FVector& HitLocation) const;
 };

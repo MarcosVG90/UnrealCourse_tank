@@ -2,9 +2,12 @@
 
 #pragma once
 
-#include "Tank.h"
+
 #include "AIController.h"
 #include "TankAIController.generated.h"
+
+// Forward declarations
+class ATank;
 
 /**
  * 
@@ -19,6 +22,8 @@ private:
 	ATank* GetControlledTank() const;
 
 	virtual void BeginPlay() override;
+
+	virtual void Tick(float DeltaSeconds) override;
 	
 	ATank* GetPlayerTank() const;
 	

@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "BattleTank.h"
+#include "Tank.h"
 #include "TankAIController.h"
 
 
@@ -18,6 +19,20 @@ void  ATankAIController::BeginPlay()
 		UE_LOG(LogTemp, Warning, TEXT("AIController found player: %s"), *(PlayerTank->GetName()));
 	}
 	UE_LOG(LogTemp, Warning, TEXT("Player Controller Begin Play"));
+}
+
+// Called every frame
+void ATankAIController::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	if (GetPlayerTank())
+	{
+		//Move toward the player
+
+		//Aim towards the player
+		//GetControlledTank()->AimAt(GetPlayerTank()->GetActorLocation());
+		//Fire if ready
+	}
 }
 
 ATank* ATankAIController::GetControlledTank() const
